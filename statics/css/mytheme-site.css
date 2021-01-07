@@ -1,9 +1,5 @@
 @charset "utf-8";
-/*!
- * 版本：MYUI Copyright © 2019
- * 作者：QQ726662013版权所有
- * 官网：https://www.mytheme.cn
- */
+ 
 
 /* all */
 body{ padding-top: 80px;}
@@ -48,7 +44,7 @@ body.active{ padding-top: 60px;}
 .myui-header__user > li > a,.myui-header__user > li > a .fa{ display: inline-block; font-size: 22px; line-height: 24px; color: #fff;}
 .myui-header__user > li .dropdown-box{ right: 0; margin-left: 0; margin-right: -120px; padding-top: 10px;}
 .myui-header__user > li .dropdown-box .item{ width: 260px; padding: 20px;}
-.myui-header__user > li.menu .dropdown-box{ right: 0; margin-left: 0; margin-right: -40px; padding-top: 10px;}
+.myui-header__user > li.menu .dropdown-box{ right: 0; margin-left: 0; margin-right: -5px; padding-top: 10px;}
 .myui-header__user > li.menu .dropdown-box .item{ width: 90px; padding: 10px;}
 .myui-header__user > li.menu .dropdown-box .item li{ padding: 5px 0; text-align: center;}
 
