@@ -9,7 +9,6 @@
  *
  * Revision: $Id: jquery.autocomplete.js 15 2009-08-22 10:30:27Z joern.zaefferer $
  */;
-
 $.browser = navigator.userAgent;
 (function($) {
     $.fn.extend({
@@ -113,19 +112,14 @@ $.browser = navigator.userAgent;
                     }
                     break;
                 case options.multiple && $.trim(options.multipleSeparator) == "," && KEY.COMMA:
-                
-				case KEY.TAB:
-				    if( selectCurrent() ) {
-				        // stop default to prevent a form submit, Opera needs special handling
-				        event.preventDefault();
-				        blockSubmit = true;
-				        return false;
-				    }
-				    break;				 
-				case KEY.RETURN:
-				    clearTimeout(timeout);
-				    timeout = setTimeout(onChange, options.delay);
-				    break;				
+                case KEY.TAB:
+                case KEY.RETURN:
+                    if (selectCurrent()) {
+                        event.preventDefault();
+                        blockSubmit = true;
+                        return false;
+                    }
+                    break;
                 case KEY.ESC:
                     select.hide();
                     break;
@@ -346,7 +340,7 @@ $.browser = navigator.userAgent;
         minChars: 1,
         delay: 400,
         matchCase: false,
-        matchSubset: true,
+        matchSubset: false,
         matchContains: false,
         cacheLength: 10,
         max: 100,
